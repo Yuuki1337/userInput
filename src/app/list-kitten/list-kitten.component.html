@@ -1,0 +1,10 @@
+<div id="displayList" class="row">
+<div class="card text-center col-3" *ngFor="let kitty of kittyCard.kittenList" style="width: 16rem;">
+    <img class="card-img-top img-fluid" [src]="kitty.pictures" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{kitty.name}}</h5>
+      <p class="card-text">{{kitty.age}} years, {{kitty.race}}</p>
+      <button (click)="kittyCard.newKittenAdopted(kitty)" class="btn btn-primary">Adopt me !!</button>
+    </div>
+  </div>
+</div>
